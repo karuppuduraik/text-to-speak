@@ -39,3 +39,7 @@ speech.volume = 5;  // Volume (0 to 1)
 speech.pitch = 1;   // Pitch (0 to 2)
 
 ## File Structure
+text-to-speech/
+├── index.html # Main application file
+├── mic.png # Microphone icon
+└── README.md # This file
