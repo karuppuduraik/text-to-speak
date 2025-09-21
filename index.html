@@ -4,49 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text To Speak</title>
+    <link rel="icon" href="mic.png">
     <style>
     body{
         background-color:whitesmoke;
         margin: 0px;
         padding: 0px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
     }
      div{
         background-color:silver;
-        width: 20vw;
-        height: 40vh;
-        padding: 10vh;
+        width: 90%;
+        max-width: 500px;
+        padding: 30px;
         text-align: center;
-        border-radius: 20%;
-        border: 2px unset white;
-        position:absolute;
-        top: 30vh;
-        left: 40vw;
-        transform: translate(-40vw -40vh);
+        border-radius: 20px;
+        border: 2px solid #ccc;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin: 20px;
      }
      h1{
-        margin-bottom:2vw;
+        margin-bottom:20px;
+        color: #333;
+        font-size: 24px;
      }
      textarea{
-        width:25vw;
-        height: 20vh;
-        transform: translateX(-3vw);
+        width: 100%;
+        height: 150px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        resize: vertical;
+        font-family: inherit;
+        font-size: 16px;
+        box-sizing: border-box;
      }
      button{
         background-color: rgba(0, 0, 255, 0.616);
         color: aliceblue;
-        width: 10vw;
-        height: 5vh;
+        width: 100%;
+        max-width: 200px;
+        height: 50px;
         border-radius: 10px;
         border: none;
-        margin-top: 5vh;
-        padding: 1vh;
+        margin-top: 25px;
+        padding: 10px;
         transition:all .3s ease;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
      }
      button:hover{
         cursor: pointer;
         background-color:blue;
-        
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     }
 
+     /* Responsive styles */
+     @media (max-width: 768px) {
+        div {
+            width: 85%;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        textarea {
+            height: 120px;
+            font-size: 15px;
+        }
+        
+        button {
+            height: 45px;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+     }
+     
+     @media (max-width: 480px) {
+        div {
+            width: 90%;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px;
+        }
+        
+        h1 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        textarea {
+            height: 100px;
+            font-size: 14px;
+            padding: 10px;
+        }
+        
+        button {
+            height: 40px;
+            margin-top: 15px;
+            font-size: 14px;
+            max-width: 180px;
+        }
+     }
+     
+     @media (max-width: 320px) {
+        h1 {
+            font-size: 18px;
+        }
+        
+        textarea {
+            height: 80px;
+        }
+        
+        button {
+            height: 35px;
+            font-size: 13px;
+            max-width: 160px;
+        }
      }
 
 
@@ -72,7 +156,7 @@
 
      }
      else{
-        alert("Enter some text")
+        alert("Please enter some text first")
      }
  }
 
